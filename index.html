@@ -4,91 +4,473 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thanh Thuy Flower | Flower Shop</title>
+
+<title>THANH THUY FLOWER | Flower Shop</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:Georgia,serif;color:#443b39;background:#fffaf7}
-header{height:85px;padding:0 7%;display:flex;align-items:center;
-justify-content:space-between;background:#fff;position:sticky;top:0;z-index:10;
-box-shadow:0 2px 12px #00000008}
-..logo {
-    text-align: center;
-    line-height: 1.2;
+/* =========================
+   1. CÀI ĐẶT CHUNG
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.logo a {
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 125px;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #493b39;
+    background: #fffaf7;
+}
+
+a {
     text-decoration: none;
+}
+
+/* =========================
+   2. THANH MENU
+========================= */
+.main-header {
+    width: 100%;
+    min-height: 115px;
+    padding: 15px 2.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: #fff;
+    border-bottom: 5px solid #e9b8bd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* LOGO CHỮ */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.brand-logo {
+    width: 70px;
+    height: 70px;
+    background: #bd8189;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.brand-name {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-.logo-name {
+.brand-name span {
     font-family: Georgia, serif;
-    font-size: 27px;
-    font-weight: 500;
-    letter-spacing: 3px;
-    color: #A96873;
+    font-size: 25px;
+    font-weight: bold;
+    color: #493b39;
+    letter-spacing: 1px;
+    white-space: nowrap;
 }
 
-.logo-sub {
+.brand-name small {
     font-family: Arial, sans-serif;
+    color: #bd8189;
     font-size: 10px;
-    letter-spacing: 5px;
-    color: #B98C89;
-    margin-top: 7px;
+    letter-spacing: 4px;
+    margin-top: 5px;
 }
-.hero{min-height:590px;background:#f5e8e5;display:flex;align-items:center;
-padding:70px 10%;gap:50px}
-.hero-text{flex:1}
-.hero-text small{letter-spacing:4px;color:#b87982;font-family:Arial}
-h1{font-size:65px;line-height:1.15;margin:25px 0;color:#624a49}
-.hero-text p{font-size:17px;line-height:1.8;color:#786765;margin-bottom:30px}
-.btn{display:inline-block;padding:15px 32px;background:#b87982;color:white;
-text-decoration:none;font-family:Arial;font-size:13px}
-.hero-img{flex:1}
-.hero-img img{width:100%;height:440px;object-fit:cover}
-section{padding:85px 9%}
-.heading{text-align:center;margin-bottom:45px}
-.heading h2{font-size:36px;color:#805c60;margin-bottom:12px}
-.heading p{font-family:Arial;color:#9a8581;font-size:14px}
-.products{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
-.product img{width:100%;height:310px;object-fit:cover}
-.product{text-align:center}
-.product h3{font-size:21px;margin:18px 0 8px}
-.product p{font-family:Arial;color:#b87982;font-size:14px}
-.about{background:#f8eeea;text-align:center}
-.about p{max-width:720px;margin:auto;line-height:2;color:#786765;font-size:17px}
-.collections{display:grid;grid-template-columns:1fr 1fr;gap:25px}
-.collection{position:relative;height:300px;overflow:hidden}
-.collection img{width:100%;height:100%;object-fit:cover}
-.collection h3{position:absolute;bottom:25px;left:25px;color:white;
-font-size:27px;text-shadow:0 2px 8px #333}
-.contact{text-align:center;background:#f8eeea}
-.contact p{margin:15px 0 25px;font-family:Arial;color:#786765}
-footer{text-align:center;padding:30px;background:#76585a;color:white;
-font-family:Arial;font-size:13px}
-@media(max-width:750px){
-header{height:auto;padding:20px;flex-direction:column;gap:18px}
-nav{gap:12px;flex-wrap:wrap;justify-content:center}
-nav a{font-size:11px}
-.hero{flex-direction:column;padding:60px 7%}
-h1{font-size:48px}
-.hero-img img{height:330px}
-.products{grid-template-columns:1fr}
-.collections{grid-template-columns:1fr}
+
+/* MENU */
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.main-nav a {
+    color: #222;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #bd8189;
+}
+
+/* GIỎ HÀNG */
+.cart-button {
+    background: #222;
+    color: white;
+    padding: 22px 27px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.cart-button:hover {
+    background: #bd8189;
+}
+
+/* =========================
+   3. BANNER TRANG CHỦ
+========================= */
+.hero {
+    min-height: 620px;
+    background: #f5e8e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 9%;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text small {
+    letter-spacing: 4px;
+    color: #b87982;
+    font-weight: 600;
+}
+
+.hero-text h1 {
+    font-family: Georgia, serif;
+    font-size: 65px;
+    line-height: 1.15;
+    margin: 25px 0;
+    color: #624a49;
+}
+
+.hero-text p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #786765;
+    margin-bottom: 30px;
+    max-width: 520px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    background: #bd8189;
+    color: white;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #96616a;
+    transform: translateY(-3px);
+}
+
+.hero-img {
+    flex: 1;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+/* =========================
+   4. CẤU TRÚC CÁC SECTION
+========================= */
+section {
+    padding: 90px 9%;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.heading h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    color: #805c60;
+    margin-bottom: 13px;
+}
+
+.heading p {
+    color: #9a8581;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   5. GIỚI THIỆU
+========================= */
+.about {
+    background: #f8eeea;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 780px;
+    margin: auto;
+    font-size: 17px;
+    line-height: 2;
+    color: #786765;
+}
+
+/* =========================
+   6. SẢN PHẨM
+========================= */
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.product {
+    text-align: center;
+    background: white;
+    padding-bottom: 25px;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-7px);
+}
+
+.product img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+}
+
+.product h3 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    margin: 20px 0 10px;
+    color: #624a49;
+}
+
+.product p {
+    font-size: 14px;
+    color: #bd8189;
+    margin-bottom: 15px;
+}
+
+.product .price {
+    font-weight: bold;
+    color: #76585a;
+}
+
+.product button {
+    border: none;
+    background: #bd8189;
+    color: white;
+    padding: 12px 23px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.product button:hover {
+    background: #805c60;
+}
+
+/* =========================
+   7. BỘ SƯU TẬP
+========================= */
+.collections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.collection {
+    position: relative;
+    height: 330px;
+    overflow: hidden;
+}
+
+.collection img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.collection:hover img {
+    transform: scale(1.06);
+}
+
+.collection h3 {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    text-shadow: 0 2px 8px #333;
+}
+
+/* =========================
+   8. BÀI VIẾT
+========================= */
+.blog {
+    background: #f8eeea;
+}
+
+.blog-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.blog-item {
+    background: white;
+    padding-bottom: 25px;
+}
+
+.blog-item img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.blog-item h3 {
+    font-family: Georgia, serif;
+    color: #805c60;
+    font-size: 20px;
+    padding: 20px 20px 10px;
+}
+
+.blog-item p {
+    color: #817471;
+    font-size: 14px;
+    line-height: 1.8;
+    padding: 0 20px;
+}
+
+/* =========================
+   9. LIÊN HỆ
+========================= */
+.contact {
+    background: #f5e8e5;
+    text-align: center;
+}
+
+.contact p {
+    margin: 15px 0;
+    color: #786765;
+}
+
+/* =========================
+   10. FOOTER
+========================= */
+footer {
+    background: #624a49;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* =========================
+   11. RESPONSIVE
+========================= */
+@media (max-width: 1100px) {
+    .main-header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 750px) {
+    .hero {
+        flex-direction: column;
+        padding: 60px 7%;
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+    }
+
+    .hero-img img {
+        height: 350px;
+    }
+
+    .products,
+    .blog-list {
+        grid-template-columns: 1fr;
+    }
+
+    .collections {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 70px 7%;
+    }
+
+    .main-nav {
+        gap: 14px;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+    }
+
+    .brand-name span {
+        font-size: 21px;
+    }
+
+    .cart-button {
+        padding: 15px 20px;
+    }
 }
 </style>
 </head>
+
 <body>
 
-
+<!-- =========================
+     HEADER / MENU
+========================= -->
 <header class="main-header">
+
     <a href="#home" class="brand">
         <div class="brand-logo">
             THANH<br>THUY
         </div>
+
         <div class="brand-name">
             <span>THANH THUY</span>
             <small>FLOWER SHOP</small>
@@ -96,91 +478,304 @@ h1{font-size:48px}
     </a>
 
     <nav class="main-nav">
-        <a href="#home">Trang chủ</a>
+        <a href="#home" class="active">Trang chủ</a>
         <a href="#about">Giới thiệu</a>
         <a href="#products">Sản phẩm</a>
         <a href="#blog">Bài viết</a>
         <a href="#contact">Liên hệ</a>
-        <a href="#collection" class="active">Bộ sưu tập</a>
+        <a href="#collection">Bộ sưu tập</a>
     </nav>
 
     <a href="#products" class="cart-button">
-        GIỎ HÀNG (0)
+        GIỎ HÀNG (<span id="cart-count">0</span>)
     </a>
+
 </header>
 
+<!-- =========================
+     TRANG CHỦ
+========================= -->
+<main>
 
 <div class="hero" id="home">
-<div class="hero-text">
-<small>WELCOME TO THANH THUY FLOWER</small>
-<h1>Flowers make<br>life beautiful.</h1>
-<p>Những đóa hoa tươi thắm, được chọn lựa và thiết kế tỉ mỉ để lưu giữ những khoảnh khắc đáng nhớ và trao gửi yêu thương.</p>
-<a href="#products" class="btn">KHÁM PHÁ SẢN PHẨM</a>
-</div>
-<div class="hero-img">
-<img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=900" alt="Bó hoa tươi">
-</div>
+
+    <div class="hero-text">
+
+        <small>WELCOME TO THANH THUY FLOWER</small>
+
+        <h1>
+            Flowers make<br>
+            life beautiful.
+        </h1>
+
+        <p>
+            Những đóa hoa tươi thắm, được chọn lựa và
+            thiết kế tỉ mỉ để lưu giữ những khoảnh khắc
+            đáng nhớ và trao gửi yêu thương.
+        </p>
+
+        <a href="#products" class="btn">
+            KHÁM PHÁ SẢN PHẨM
+        </a>
+
+    </div>
+
+    <div class="hero-img">
+
+        <img
+        src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1000"
+        alt="Bó hoa tươi Thanh Thuy">
+
+    </div>
+
 </div>
 
-<section id="about" class="about">
-<div class="heading">
-<h2>Our Story</h2>
-<p>Câu chuyện của Thanh Thuy Flower</p>
-</div>
-<p>Thanh Thuy Flower ra đời từ tình yêu dành cho vẻ đẹp tự nhiên của những đóa hoa. Chúng tôi tin rằng mỗi bông hoa đều mang một thông điệp riêng. Bằng sự tận tâm và sáng tạo, shop mong muốn mang đến những sản phẩm hoa tươi tinh tế, giúp khách hàng gửi gắm tình cảm trong từng dịp đặc biệt.</p>
+<!-- =========================
+     GIỚI THIỆU
+========================= -->
+<section class="about" id="about">
+
+    <div class="heading">
+        <h2>Our Story</h2>
+        <p>Câu chuyện của Thanh Thuy Flower</p>
+    </div>
+
+    <div class="about-content">
+
+        Thanh Thuy Flower ra đời từ tình yêu dành cho
+        vẻ đẹp tự nhiên của những đóa hoa.
+
+        Chúng tôi tin rằng mỗi bông hoa đều mang
+        một thông điệp riêng. Bằng sự tận tâm và sáng tạo,
+        shop mong muốn mang đến những sản phẩm hoa tươi
+        tinh tế, giúp khách hàng gửi gắm tình cảm
+        trong từng dịp đặc biệt.
+
+    </div>
+
 </section>
 
+<!-- =========================
+     SẢN PHẨM
+========================= -->
 <section id="products">
-<div class="heading">
-<h2>Our Flowers</h2>
-<p>Khám phá những sản phẩm nổi bật</p>
-</div>
-<div class="products">
-<div class="product">
-<img src="https://images.unsplash.com/photo-1520763185298-1b434c919102?w=700" alt="Hoa hồng">
-<h3>Rose Bouquet</h3><p>Hoa hồng tình yêu</p>
-</div>
-<div class="product">
-<img src="https://images.unsplash.com/photo-1528913775512-624d24b27b96?w=700" alt="Hoa tulip">
-<h3>Tulip Bouquet</h3><p>Hoa tulip thanh lịch</p>
-</div>
-<div class="product">
-<img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=700" alt="Hoa bó">
-<h3>Special Bouquet</h3><p>Hoa thiết kế riêng</p>
-</div>
-</div>
+
+    <div class="heading">
+        <h2>Our Flowers</h2>
+        <p>Khám phá những sản phẩm nổi bật</p>
+    </div>
+
+    <div class="products">
+
+        <div class="product">
+
+            <img
+            src="https://images.unsplash.com/photo-1520763185298-1b434c919102?w=700"
+            alt="Hoa hồng">
+
+            <h3>Rose Bouquet</h3>
+            <p>Hoa hồng tình yêu</p>
+            <div class="price">350.000 VNĐ</div>
+
+            <button onclick="addToCart()">
+                THÊM VÀO GIỎ
+            </button>
+
+        </div>
+
+        <div class="product">
+
+            <img
+            src="https://images.unsplash.com/photo-1528913775512-624d24b27b96?w=700"
+            alt="Hoa tulip">
+
+            <h3>Tulip Bouquet</h3>
+            <p>Hoa tulip thanh lịch</p>
+            <div class="price">450.000 VNĐ</div>
+
+            <button onclick="addToCart()">
+                THÊM VÀO GIỎ
+            </button>
+
+        </div>
+
+        <div class="product">
+
+            <img
+            src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=700"
+            alt="Hoa thiết kế">
+
+            <h3>Special Bouquet</h3>
+            <p>Hoa thiết kế riêng</p>
+            <div class="price">550.000 VNĐ</div>
+
+            <button onclick="addToCart()">
+                THÊM VÀO GIỎ
+            </button>
+
+        </div>
+
+    </div>
+
 </section>
 
+<!-- =========================
+     BỘ SƯU TẬP
+========================= -->
 <section id="collection">
-<div class="heading">
-<h2>Our Collections</h2>
-<p>Hoa dành cho những dịp đặc biệt</p>
-</div>
-<div class="collections">
-<div class="collection">
-<img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=800" alt="Hoa sinh nhật">
-<h3>Birthday Flowers</h3>
-</div>
-<div class="collection">
-<img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?w=800" alt="Hoa tình yêu">
-<h3>Love & Romance</h3>
-</div>
-</div>
+
+    <div class="heading">
+        <h2>Our Collections</h2>
+        <p>Hoa dành cho những dịp đặc biệt</p>
+    </div>
+
+    <div class="collections">
+
+        <div class="collection">
+
+            <img
+            src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=800"
+            alt="Hoa sinh nhật">
+
+            <h3>Birthday Flowers</h3>
+
+        </div>
+
+        <div class="collection">
+
+            <img
+            src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?w=800"
+            alt="Hoa tình yêu">
+
+            <h3>Love & Romance</h3>
+
+        </div>
+
+    </div>
+
 </section>
 
+<!-- =========================
+     BÀI VIẾT
+========================= -->
+<section class="blog" id="blog">
+
+    <div class="heading">
+        <h2>Flower Journal</h2>
+        <p>Những câu chuyện nhỏ về thế giới hoa</p>
+    </div>
+
+    <div class="blog-list">
+
+        <div class="blog-item">
+
+            <img
+            src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=700"
+            alt="Hoa và cảm xúc">
+
+            <h3>Ý nghĩa của những đóa hoa</h3>
+
+            <p>
+                Mỗi loài hoa đều mang một ý nghĩa riêng,
+                là cách chúng ta gửi gắm yêu thương
+                và những lời chưa nói.
+            </p>
+
+        </div>
+
+        <div class="blog-item">
+
+            <img
+            src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=700"
+            alt="Hoa tươi">
+
+            <h3>Bí quyết giữ hoa tươi lâu</h3>
+
+            <p>
+                Một vài mẹo nhỏ giúp những bó hoa
+                luôn giữ được vẻ đẹp và sự tươi mới
+                trong không gian của bạn.
+            </p>
+
+        </div>
+
+        <div class="blog-item">
+
+            <img
+            src="https://images.unsplash.com/photo-1520763185298-1b434c919102?w=700"
+            alt="Tặng hoa">
+
+            <h3>Chọn hoa cho người mình thương</h3>
+
+            <p>
+                Hãy chọn những đóa hoa phù hợp
+                để biến mỗi món quà ấy trở thành
+                một kỷ niệm đáng nhớ.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     LIÊN HỆ
+========================= -->
 <section class="contact" id="contact">
-<div class="heading">
-<h2>Contact Us</h2>
-<p>Hãy để chúng tôi giúp bạn trao gửi yêu thương</p>
-</div>
-<p>THANH THUY FLOWER</p>
-<p>Email: thanhthuyflower@gmail.com</p>
-<p>Hotline: 0325900471</p>
-<a href="mailto:thanhthuyflower@gmail.com" class="btn">LIÊN HỆ NGAY</a>
+
+    <div class="heading">
+        <h2>Contact Us</h2>
+        <p>Hãy để chúng tôi giúp bạn trao gửi yêu thương</p>
+    </div>
+
+    <p><strong>THANH THUY FLOWER</strong></p>
+
+    <p>Email: pthuy7645@gmail.com</p>
+
+    <p>Hotline: 0325900471</p>
+
+    <p>Địa chỉ: Phạm Văn Chiêu</p>
+
+    <a href="mailto:pthuy7645@gmail.com" class="btn">
+        LIÊN HỆ NGAY
+    </a>
+
 </section>
 
+</main>
+
+<!-- =========================
+     FOOTER
+========================= -->
 <footer>
-© 2026 THANH THUY FLOWER. ALL RIGHTS RESERVED.
+
+    <h3>THANH THUY FLOWER</h3>
+
+    <p>Flowers for every moment.</p>
+
+    <p>© 2026 THANH THUY FLOWER. ALL RIGHTS RESERVED.</p>
+
 </footer>
+
+<!-- =========================
+     JAVASCRIPT GIỎ HÀNG
+========================= -->
+<script>
+
+let cartCount = 0;
+
+function addToCart() {
+
+    cartCount++;
+
+    document.getElementById("cart-count").innerText = cartCount;
+
+    alert("Đã thêm sản phẩm vào giỏ hàng!");
+
+}
+
+</script>
+
 </body>
 </html>
