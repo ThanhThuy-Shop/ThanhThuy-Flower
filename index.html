@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thanh Thuy Flower | Flower Shop</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,serif;color:#443b39;background:#fffaf7}
+header{height:85px;padding:0 7%;display:flex;align-items:center;
+justify-content:space-between;background:#fff;position:sticky;top:0;z-index:10;
+box-shadow:0 2px 12px #00000008}
+.logo{font-size:25px;color:#b87982;font-weight:bold;letter-spacing:2px}
+nav{display:flex;gap:27px}
+nav a{text-decoration:none;color:#544746;font-family:Arial;font-size:13px}
+nav a:hover{color:#bd7d89}
+.hero{min-height:590px;background:#f5e8e5;display:flex;align-items:center;
+padding:70px 10%;gap:50px}
+.hero-text{flex:1}
+.hero-text small{letter-spacing:4px;color:#b87982;font-family:Arial}
+h1{font-size:65px;line-height:1.15;margin:25px 0;color:#624a49}
+.hero-text p{font-size:17px;line-height:1.8;color:#786765;margin-bottom:30px}
+.btn{display:inline-block;padding:15px 32px;background:#b87982;color:white;
+text-decoration:none;font-family:Arial;font-size:13px}
+.hero-img{flex:1}
+.hero-img img{width:100%;height:440px;object-fit:cover}
+section{padding:85px 9%}
+.heading{text-align:center;margin-bottom:45px}
+.heading h2{font-size:36px;color:#805c60;margin-bottom:12px}
+.heading p{font-family:Arial;color:#9a8581;font-size:14px}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.product img{width:100%;height:310px;object-fit:cover}
+.product{text-align:center}
+.product h3{font-size:21px;margin:18px 0 8px}
+.product p{font-family:Arial;color:#b87982;font-size:14px}
+.about{background:#f8eeea;text-align:center}
+.about p{max-width:720px;margin:auto;line-height:2;color:#786765;font-size:17px}
+.collections{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.collection{position:relative;height:300px;overflow:hidden}
+.collection img{width:100%;height:100%;object-fit:cover}
+.collection h3{position:absolute;bottom:25px;left:25px;color:white;
+font-size:27px;text-shadow:0 2px 8px #333}
+.contact{text-align:center;background:#f8eeea}
+.contact p{margin:15px 0 25px;font-family:Arial;color:#786765}
+footer{text-align:center;padding:30px;background:#76585a;color:white;
+font-family:Arial;font-size:13px}
+@media(max-width:750px){
+header{height:auto;padding:20px;flex-direction:column;gap:18px}
+nav{gap:12px;flex-wrap:wrap;justify-content:center}
+nav a{font-size:11px}
+.hero{flex-direction:column;padding:60px 7%}
+h1{font-size:48px}
+.hero-img img{height:330px}
+.products{grid-template-columns:1fr}
+.collections{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">THANH THUY FLOWER</div>
+<nav>
+<a href="#home">TRANG CHỦ</a>
+<a href="#about">GIỚI THIỆU</a>
+<a href="#products">SẢN PHẨM</a>
+<a href="#collection">BỘ SƯU TẬP</a>
+<a href="#contact">LIÊN HỆ</a>
+</nav>
+</header>
+
+<div class="hero" id="home">
+<div class="hero-text">
+<small>WELCOME TO THANH THUY FLOWER</small>
+<h1>Flowers make<br>life beautiful.</h1>
+<p>Những đóa hoa tươi thắm, được chọn lựa và thiết kế tỉ mỉ để lưu giữ những khoảnh khắc đáng nhớ và trao gửi yêu thương.</p>
+<a href="#products" class="btn">KHÁM PHÁ SẢN PHẨM</a>
+</div>
+<div class="hero-img">
+<img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=900" alt="Bó hoa tươi">
+</div>
+</div>
+
+<section id="about" class="about">
+<div class="heading">
+<h2>Our Story</h2>
+<p>Câu chuyện của Thanh Thuy Flower</p>
+</div>
+<p>Thanh Thuy Flower ra đời từ tình yêu dành cho vẻ đẹp tự nhiên của những đóa hoa. Chúng tôi tin rằng mỗi bông hoa đều mang một thông điệp riêng. Bằng sự tận tâm và sáng tạo, shop mong muốn mang đến những sản phẩm hoa tươi tinh tế, giúp khách hàng gửi gắm tình cảm trong từng dịp đặc biệt.</p>
+</section>
+
+<section id="products">
+<div class="heading">
+<h2>Our Flowers</h2>
+<p>Khám phá những sản phẩm nổi bật</p>
+</div>
+<div class="products">
+<div class="product">
+<img src="https://images.unsplash.com/photo-1520763185298-1b434c919102?w=700" alt="Hoa hồng">
+<h3>Rose Bouquet</h3><p>Hoa hồng tình yêu</p>
+</div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1528913775512-624d24b27b96?w=700" alt="Hoa tulip">
+<h3>Tulip Bouquet</h3><p>Hoa tulip thanh lịch</p>
+</div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=700" alt="Hoa bó">
+<h3>Special Bouquet</h3><p>Hoa thiết kế riêng</p>
+</div>
+</div>
+</section>
+
+<section id="collection">
+<div class="heading">
+<h2>Our Collections</h2>
+<p>Hoa dành cho những dịp đặc biệt</p>
+</div>
+<div class="collections">
+<div class="collection">
+<img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=800" alt="Hoa sinh nhật">
+<h3>Birthday Flowers</h3>
+</div>
+<div class="collection">
+<img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?w=800" alt="Hoa tình yêu">
+<h3>Love & Romance</h3>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="heading">
+<h2>Contact Us</h2>
+<p>Hãy để chúng tôi giúp bạn trao gửi yêu thương</p>
+</div>
+<p>THANH THUY FLOWER</p>
+<p>Email: your-email@example.com</p>
+<p>Hotline: 0900 000 000</p>
+<a href="mailto:your-email@example.com" class="btn">LIÊN HỆ NGAY</a>
+</section>
+
+<footer>
+© 2026 THANH THUY FLOWER. ALL RIGHTS RESERVED.
+</footer>
+</body>
+</html>
