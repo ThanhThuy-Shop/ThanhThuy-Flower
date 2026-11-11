@@ -12,10 +12,33 @@ body{font-family:Georgia,serif;color:#443b39;background:#fffaf7}
 header{height:85px;padding:0 7%;display:flex;align-items:center;
 justify-content:space-between;background:#fff;position:sticky;top:0;z-index:10;
 box-shadow:0 2px 12px #00000008}
-.logo{font-size:25px;color:#b87982;font-weight:bold;letter-spacing:2px}
-nav{display:flex;gap:27px}
-nav a{text-decoration:none;color:#544746;font-family:Arial;font-size:13px}
-nav a:hover{color:#bd7d89}
+..logo {
+    text-align: center;
+    line-height: 1.2;
+}
+
+.logo a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-name {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #A96873;
+}
+
+.logo-sub {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: #B98C89;
+    margin-top: 7px;
+}
 .hero{min-height:590px;background:#f5e8e5;display:flex;align-items:center;
 padding:70px 10%;gap:50px}
 .hero-text{flex:1}
@@ -61,7 +84,12 @@ h1{font-size:48px}
 <body>
 
 <header>
-<div class="logo">THANH THUY FLOWER</div>
+<div class="logo">
+   <a href="#home">
+        <span class="logo-name">THANH THUY</span>
+        <span class="logo-sub">FLOWER SHOP</span>
+    </a>
+</div>
 <nav>
 <a href="#home">TRANG CHỦ</a>
 <a href="#about">GIỚI THIỆU</a>
@@ -135,9 +163,9 @@ h1{font-size:48px}
 <p>Hãy để chúng tôi giúp bạn trao gửi yêu thương</p>
 </div>
 <p>THANH THUY FLOWER</p>
-<p>Email: your-email@example.com</p>
-<p>Hotline: 0900 000 000</p>
-<a href="mailto:your-email@example.com" class="btn">LIÊN HỆ NGAY</a>
+<p>Email: thanhthuyflower@gmail.com</p>
+<p>Hotline: 0325900471</p>
+<a href="mailto:thanhthuyflower@gmail.com" class="btn">LIÊN HỆ NGAY</a>
 </section>
 
 <footer>
